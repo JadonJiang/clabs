@@ -17,9 +17,9 @@ void main()
 	unsigned int num=0, i=0;
 	printf("请输入一个数字:");
 
-	while ((nums[i] = getchar()) && nums[i] != '\n')//判断是否读到数字
+	while ((nums[i] = getchar()) && nums[i] != '\n')
 	{
-		num = num * 10 + nums[i] - '0'; //这一步是关键，相当于<<
+		num = num * 10 + nums[i] - '0'; 
 	}
 	printf("%d",cout_one_bits(num));
 	return 0;

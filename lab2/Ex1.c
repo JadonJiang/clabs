@@ -4,7 +4,7 @@
 int main() {
 
 
-	int cnt = 0, i;
+	int cnt = 0;
 	unsigned int num = -1;
 
 

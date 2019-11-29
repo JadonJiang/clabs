@@ -9,5 +9,5 @@ int main(){
     input /= 2;
     }
     printf ("%d\n",lb);
-    return 0'
+    return 0;
 }

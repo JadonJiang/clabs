@@ -18,6 +18,6 @@ int main() {
 	};
 
 	printf("Max bit of unsigned int %d\n", cnt);
-	system("pause");
-	return 0;
+
+	return 0  
 }

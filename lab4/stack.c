@@ -10,7 +10,7 @@
 #define Copy 'A'   //要用复制功能在输入字符串时敲A
 #define Print 'B'  //要用打印功能在输入字符串时敲B
 #define Exchange 'C' //要用交换功能在输入字符串时敲C
-#define Clear 'D'  //要用清楚功能在输入字符串时敲D
+#define Clear 'D'  //要用清除功能在输入字符串时敲D
 
 int getop(char[]);
 int getch(void);
@@ -20,13 +20,13 @@ void push(double);
 
 double pop(void);
 
-void PrintStack(); // 打印栈顶元素 sp不变
+void PrintStack(); 
 
-void CopyStack(); //复制栈顶元素 sp++
+void CopyStack(); 
 
-void ExchangeStack(); //交换栈顶元素 sp不变
+void ExchangeStack(); 
 
-void ClearStack(); //清空栈 sp为 0 
+void ClearStack(); 
 
 int sp = 0;
 double val[MAXVAL];

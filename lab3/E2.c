@@ -4,7 +4,7 @@
 
 int main()
 {
-	int nums[10] = {0};
+	int nums[100] = {0};
 	unsigned int num = 0, i = 0,j=0;
 	printf("请输入一个十六进制的非负整数:");
 	char temp;

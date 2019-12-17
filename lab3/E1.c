@@ -1,32 +1,35 @@
 #include<stdio.h>
+#define length 100
+#include<string.h>
+#include<stdlib.h>
 
-#define length 20
-int strrindex(char str[],char  flag) {
-	int i = 0;
-	int res = -1;
-	for (i = 0; i < length; i++) {
-		if (str[i] == flag) res = i;
-	}
-	return res;
-}
 
-int main()
+int fun(char *s, char *t)
 {
-	char str[length] = { 0 };
+	int tarindex = 0;
+	while (s[tarindex] != '\0')
+	{
+		int tarlen = tarindex;
+		int patlen;
+		for (patlen = 0; t[patlen] != '\0'; patlen++)
+		{
+			if (s[tarlen++] != t[patlen])
+			{
+				break;
+			}
+		}
+		if (t[patlen] == '\0')
+		{
+			return tarindex;
+		}
+		tarindex++;
+	}
+	return -1;
+}
+void main()
+{
+	char s[length], t[length];
+	scanf("%s %s", s,t);
+	printf("%d\n",fun(s, t));
 
-	int i = 0;
-	char word;
-	printf("请输入一串字符:\n");
-	char temp;
-	while ((temp = getchar()) && temp != '\n') {
-		str[i] = temp;
-		i++;
-	};//判断是否读到数字
-	printf("请输入一个字符:\n");
-	scanf("%c", &word);
-
-
-	printf("结果:%d", strrindex(str,word));
-	
-	return 0;
 }

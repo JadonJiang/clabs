@@ -11,7 +11,7 @@ int main()
     printf("Celsius-Fahrenheit table\n");
     while (celsius<=upper)
     {
-        fahr=celsius*9/5+32;
+        fahr=celsius*5/9+32;
         printf("%d\t%d\n",celsius,fahr);
         celsius=celsius+step;
     }

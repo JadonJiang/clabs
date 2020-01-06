@@ -1,10 +1,8 @@
 #include<stdio.h>
 #define length 100
-#include <string.h>
-#include <stdlib.h>
 #define max(a,b) ((a)>(b)?(a):(b))
 
-int fun(char *s, char *t)
+int fun(char s[], char t[])
 {
 	int res = -1;
 	int tarindex = 0;
@@ -29,7 +27,6 @@ int fun(char *s, char *t)
 }
 void main()
 {
-	char * ptr;
 	char s[length], t[length];
 	scanf("%s %s", s,t);
 	printf("%d\n", fun(s, t));

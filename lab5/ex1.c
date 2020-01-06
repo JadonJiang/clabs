@@ -1,26 +1,37 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include<stdio.h>
+#include<string.h>
+#define length 100
 
-void revserse(char str[]);
+
+void reverser(char s[],int i,int len);
 
 
-int main(int argc)
+int main()
 {
-	char str[100];
-	gets(str);
-	revserse(str);
-	printf("%s\n", str);
-	
+    char s[length];
+    gets(s);
+    reverse(s);
+    printf("%s\n", s);
+
 }
 
-void revserse(char str[]){
-	int begin = 0;
-	int end = strlen(str) - 1;
-	for (begin = 0; begin < end; begin++) {
-		char temp = str[begin];
-		str[begin] = str[end];
-		str[end] = temp;
-		end--;
-	}
+void reverse(char s[])
+{
 
+    reverser(s,0,strlen(s));
+
+}
+
+
+void reverser(char s[],int i,int len)
+{
+    int c,j;
+
+    j=len-(i+1);
+    if(i<j){
+        c=s[i];
+        s[i]=s[j];
+        s[j]=c;
+        reverser(s,++i,len);
+    }
 }
